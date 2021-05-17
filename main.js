@@ -6,12 +6,13 @@ require('electron-reload')(__dirname);
 function createWindow() {
     const win = new BrowserWindow({
         width: 400,
-        height: 600,
+        height: 450,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js')
         }
     })
     win.loadFile('./src/index.html');
+    win.webContents.openDevTools();
 }
 
 app.whenReady().then(() => {

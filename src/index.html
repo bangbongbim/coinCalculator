@@ -20,20 +20,29 @@
         <div class="contents">
             <p class="title">레버리지</p>
             <div class="button-box">
-                <button class="minus">
-                    <ion-icon name="remove-outline" class="minus"></ion-icon>
+                <button class="minusButton">
+                    <ion-icon name="remove-outline" class="mpIcon" id="minusIcon"></ion-icon>
                 </button>
-                <input type="text">
-                <button class="plus">
-                    <ion-icon name="add-outline" class="plus"></ion-icon>
+                <input type="text" id="inputValue" >
+                <button class="plusButton">
+                    <ion-icon name="add-outline" class="mpIcon" id="plusIcon"></ion-icon>
                 </button>
             </div>
-            <input type="range" class="inputRange">
+            <div class="typeSelect-box">
+                <button class="maker" data-fee="0.02" >MAKER</button>
+                <button class="taker" data-fee="0.04">TAKER</button>
+            </div>
+            <button class="cal">계산하기</button>
+
+            <div class="result-box">
+                <p class="result">최소 수익률(매도 기준) : <span class="resultValue" >15%</span></p> 
+            </div>
         </div>
     </div>
 
     <script src="https://unpkg.com/@material-ui/core@latest/umd/material-ui.development.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="./index.js"></script>
 </body>
 
 </html>
