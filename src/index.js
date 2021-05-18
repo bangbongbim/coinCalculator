@@ -37,7 +37,8 @@ let feeResult;
  cal.addEventListener('click',()=>{
     const margin = inputValue.value;
     console.log(margin);
-    const fee = feeType === 'maker'? 0.02 : 0.04;
+    const fee = feeType === 'maker'? 0.02 : feeType === 'taker' ? 0.04 : '0';
+    console.log(feeType,fee)
     feeResult = (fee * margin);
 
     document.querySelector('.resultValue').innerHTML=feeResult+"%"
